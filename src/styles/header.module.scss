@@ -1,0 +1,48 @@
+.container {
+    background-color: white;
+    width: 100%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    // border: 1px solid #ccc;
+}
+
+.inner {
+    padding: 1rem 0;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.username {
+    display: none;
+    align-items: center;
+    gap: 5px;
+
+    p {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 18.77px;
+        color: #213F7D;
+    }
+}
+
+.menu {
+    display: block;
+}
+
+@media (min-width: 1024px) {
+    .inner {
+        padding-left: 1rem;
+        padding-right: 2rem;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .username {
+        display: flex;
+    }
+}

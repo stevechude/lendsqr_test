@@ -26,6 +26,8 @@ export default function Home() {
             />
           </div>
 
+          {/* <div className={styles.shadowDivider}></div> */}
+
           <div className={styles.right}>
             <div className={styles.wel}>
               <p className={styles.welcome}>Welcome!</p>
