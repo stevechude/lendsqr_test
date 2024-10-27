@@ -1,0 +1,145 @@
+$primary-color: #39cdcc;
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1440px;
+  overflow-y: auto;
+
+  button {
+    cursor: pointer;
+  }
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 139px;
+  max-width: 600px;
+  margin-top: 106px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-self: self-end;
+  gap: 3rem;
+  max-width: 447px;
+  margin-top: 73px;
+
+  .wel {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .welcome {
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 54.64px;
+      color: #213f7d;
+    }
+
+    .enter {
+      color: #545f7d;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 27.32px;
+    }
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  input {
+    border: 2px solid #545f7d26;
+    border-radius: 5px;
+    outline: none;
+    color: #545f7d;
+    width: 447px;
+    height: 50px;
+    padding-left: 16px;
+    font-size: 14px;
+  }
+
+  .forgot {
+    color: #39cdcc;
+    text-transform: uppercase;
+    line-height: 16.39px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .btn {
+    margin-top: 6px;
+    background-color: $primary-color;
+    color: #fff;
+    outline: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    height: 48px;
+    border: none;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    margin-left: 67px;
+    margin-right: 157px;
+    max-width: 1440px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    margin-left: 33.5px;
+    margin-right: 78.5px;
+    max-width: 1024px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .left {
+    display: none;
+  }
+
+  .right {
+    align-self: center;
+    justify-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 55%;
+    width: 100%;
+  }
+
+  .form input {
+    width: 100%;
+  }
+
+  .right .wel {
+    justify-items: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .right {
+    max-width: 90%;
+    width: 100%;
+  }
+}
