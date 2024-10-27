@@ -1,48 +1,112 @@
 .container {
-    background-color: white;
-    width: 100%;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    // border: 1px solid #ccc;
+  background-color: white;
+  width: 100%;
+  box-shadow: 0 4px 2px -2px gray;
+  border-bottom: 1px solid #ccc;
 }
 
 .inner {
-    padding: 1rem 0;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+  padding: 1rem 0;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.right {
+  display: none;
+  align-items: center;
+  gap: 30px;
+}
+
+.field {
+  display: none;
+}
+
+.docs {
+  text-decoration: underline;
+  color: #213f7d;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .username {
-    display: none;
-    align-items: center;
-    gap: 5px;
+  display: none;
+  align-items: center;
+  gap: 5px;
 
-    p {
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 18.77px;
-        color: #213F7D;
-    }
+  p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18.77px;
+    color: #213f7d;
+  }
 }
 
 .menu {
-    display: block;
+  display: block;
 }
 
 @media (min-width: 1024px) {
-    .inner {
-        padding-left: 1rem;
-        padding-right: 2rem;
+  .inner {
+    padding-left: 1rem;
+    padding-right: 2rem;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .field {
+    display: flex;
+    align-items: center;
+
+    .in {
+      padding: 7px 0;
+      padding-left: 10px;
+      border: 1px solid #213f7d;
+      opacity: 0.2;
+      border-top-left-radius: 7px;
+      border-bottom-left-radius: 7px;
+      width: 300px;
+      color: #545f7d;
     }
 
-    .menu {
-        display: none;
+    .searchIcon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #39cdcc;
+      border-top-right-radius: 7px;
+      border-bottom-right-radius: 7px;
+      padding: 8px 15px;
     }
+  }
 
-    .username {
-        display: flex;
-    }
+  .in::-webkit-input-placeholder {
+    /* Chrome, Safari, Opera */
+    color: #545f7d;
+  }
+  .in::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #545f7d;
+  }
+  .in:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #545f7d;
+  }
+  .in::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #545f7d;
+  }
+
+  .right {
+    display: flex;
+  }
+
+  .username {
+    display: flex;
+  }
 }
