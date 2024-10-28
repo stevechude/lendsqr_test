@@ -7,7 +7,7 @@
     display: block;
     max-width: 233px;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background: #ffffff;
     border-right: 1px solid #ccc;
     overflow-y: auto;
@@ -35,20 +35,29 @@
       gap: 5px;
     }
 
-    .customers {
+    .customers,
+    .business {
       display: flex;
       flex-direction: column;
-      gap: 18px;
+      gap: 10px;
+      font-size: 12px;
+
+      .customers:first-child {
+        color: #545F7D;
+        font-weight: 700;
+      }
 
       p {
         font-size: 12px;
         font-weight: 500;
         line-height: 14.08px;
       }
+
       div {
         display: flex;
         align-items: center;
         gap: 5px;
+        padding: 5px 0;
       }
     }
   }

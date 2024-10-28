@@ -4,6 +4,7 @@ import { FaAngleDown } from "react-icons/fa";
 import DashIcon from "@/assets/DashIcon";
 import OrgIcon from "@/assets/OrgIcon";
 import { customersMenu } from "../sidebar/customers";
+import { businessMenu } from "../sidebar/businesses";
 
 const SideBar = () => {
   return (
@@ -26,7 +27,17 @@ const SideBar = () => {
           <p>CUSTOMERS</p>
           {customersMenu?.map((dt) => (
             <div key={dt.id}>
-              {/* {dt.icon} */}
+              {<dt.icon />}
+              <p>{dt.name}</p>
+            </div>
+          ))}
+        </div>
+        {/* businesses */}
+        <div className={styles.business}>
+          <p>BUSINESSES</p>
+          {businessMenu?.map((dt) => (
+            <div key={dt.id}>
+              {<dt.icon />}
               <p>{dt.name}</p>
             </div>
           ))}

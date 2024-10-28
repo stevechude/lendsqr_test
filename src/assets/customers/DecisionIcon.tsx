@@ -3,7 +3,7 @@ import React from "react";
 const DecisionIcon = () => {
   return (
     <svg
-      width="19"
+      width="13"
       height="13"
       viewBox="0 0 19 13"
       fill="none"

@@ -3,7 +3,7 @@ import React from "react";
 const SavingsIcon = () => {
   return (
     <svg
-      width="16"
+      width="14"
       height="15"
       viewBox="0 0 16 15"
       fill="none"

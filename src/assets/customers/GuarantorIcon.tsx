@@ -3,7 +3,7 @@ import React from "react";
 const GuarantorIcon = () => {
   return (
     <svg
-      width="10"
+      width="9"
       height="12"
       viewBox="0 0 10 12"
       fill="none"

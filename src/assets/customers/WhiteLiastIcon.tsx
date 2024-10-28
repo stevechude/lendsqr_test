@@ -3,7 +3,7 @@ import React from "react";
 const WhiteLiastIcon = () => {
   return (
     <svg
-      width="16"
+      width="14"
       height="13"
       viewBox="0 0 16 13"
       fill="none"

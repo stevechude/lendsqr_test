@@ -3,7 +3,7 @@ import React from "react";
 const LoanReq = () => {
   return (
     <svg
-      width="18"
+      width="14"
       height="22"
       viewBox="0 0 18 22"
       fill="none"
