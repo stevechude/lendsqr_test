@@ -6,3 +6,7 @@ export const tableHeaders = [
   "Date joined",
   "Status",
 ];
+
+export const userDetailsTabs = [
+  "General Details", "Documents", 'Bank Details', 'Loans', 'Savings', 'App and System'
+]

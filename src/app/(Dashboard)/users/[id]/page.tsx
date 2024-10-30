@@ -3,7 +3,7 @@ import React from "react";
 
 const UserDetailsPage = () => {
   return (
-    <div>
+    <div style={{ width: "100%" }}>
       <UserDetails />
     </div>
   );

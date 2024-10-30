@@ -118,7 +118,7 @@ const Users = () => {
                         />
                       </td>
                       {dropdownUserId === user?._id && (
-                        <div className={styles.drop}>
+                        <td className={styles.drop}>
                           <div className={styles.dropMain}>
                             <Link
                               href={`/users/${user?._id}`}
@@ -137,7 +137,7 @@ const Users = () => {
                               <p>Activate User</p>
                             </div>
                           </div>
-                        </div>
+                        </td>
                       )}
                     </tr>
                   ))
