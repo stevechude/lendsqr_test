@@ -1,0 +1,151 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tableContainer {
+  box-shadow: 0px 0px 5px -2px gray;
+  width: 100%;
+  //   height: 60vh;
+  border-radius: 4px;
+  overflow-x: auto;
+  overflow-y: auto;
+
+  table {
+    width: 100%;
+    overflow-x: auto;
+  }
+}
+
+.tableH {
+  text-transform: uppercase;
+  color: #545f7d;
+
+  th {
+    text-align: left;
+    font-size: 12px;
+    padding: 20px 10px;
+  }
+}
+
+.tableBod {
+  color: #545f7d;
+  position: relative;
+
+  td {
+    font-size: 14px;
+    padding: 20px 10px;
+    line-height: 16.42px;
+    text-align: left;
+    border-bottom: 1px solid #213f7d1a;
+    z-index: -1;
+  }
+
+  .drop {
+    position: absolute;
+    box-shadow: 0px 0px 5px -2px gray;
+    border-radius: 4px;
+    top: 2rem;
+    right: 2px;
+    z-index: 1000;
+    background: white;
+
+    .dropMain {
+      padding: 15px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+
+      .dropList {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        font-size: 14px;
+        line-height: 16.42px;
+        color: #545f7d;
+        padding: 5px 5px;
+        width: 100%;
+        cursor: pointer;
+      }
+      .dropList:hover {
+        background: #f4f1f1;
+      }
+    }
+  }
+}
+
+.pagContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.paginationContainer {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.paginationActive {
+  color: #213f7d;
+  // opacity: 100%;
+}
+
+.eachElem {
+  padding: 0 10px;
+  color: #545f7d;
+  // opacity: 60%;
+  cursor: pointer;
+}
+
+.prevBtnClass {
+  background: #213f7d1a;
+  border-radius: 5px;
+  padding: 4px 6px;
+  display: flex;
+  align-items: center;
+}
+
+.nexBtnClass {
+  background: #213f7d1a;
+  border-radius: 5px;
+  padding: 4px 6px;
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    gap: 40px;
+  }
+
+  .cards {
+    gap: 50px;
+  }
+
+  .headerText {
+    color: #213f7d;
+    font-weight: lighter;
+  }
+  .tableH {
+    gap: 60px;
+  }
+}

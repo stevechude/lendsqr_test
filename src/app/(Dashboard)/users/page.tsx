@@ -1,7 +1,12 @@
+import Users from "@/components/users/Users";
 import React from "react";
 
 const UsersPage = () => {
-  return <div>UsersPage</div>;
+  return (
+    <div>
+      <Users />
+    </div>
+  );
 };
 
 export default UsersPage;

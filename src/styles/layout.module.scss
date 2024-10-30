@@ -10,3 +10,16 @@
   display: flex;
   background: #fff;
 }
+
+.content {
+  padding: 15px 7px;
+  overflow-x: auto;
+}
+
+@media (min-width: 1024px) {
+  .content {
+    padding: 35px 60px;
+    height: 100vh;
+    overflow-y: auto;
+  }
+}

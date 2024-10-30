@@ -48,7 +48,6 @@ $primary-color: #39cdcc;
   max-width: 447px;
   padding-top: 73px;
 
-
   .wel {
     display: flex;
     flex-direction: column;
@@ -154,7 +153,7 @@ $primary-color: #39cdcc;
     justify-self: center;
     margin-left: auto;
     margin-right: auto;
-    max-width: 55%;
+    max-width: 60%;
     width: 100%;
   }
 
@@ -170,7 +169,11 @@ $primary-color: #39cdcc;
 
 @media (max-width: 500px) {
   .right {
-    max-width: 90%;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .form input {
     width: 100%;
   }
 }

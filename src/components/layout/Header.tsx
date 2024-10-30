@@ -9,7 +9,10 @@ import { IoIosSearch } from "react-icons/io";
 
 const Header = () => {
   return (
-    <section style={{ boxShadow: "0 4px 2px -2px gray" }} className={styles.container}>
+    <section
+      // style={{ boxShadow: "0px 0px 5px -2px gray" }}
+      className={styles.container}
+    >
       <div className={styles.inner}>
         <div className={styles.menu}>
           <IoMenuSharp size={25} />

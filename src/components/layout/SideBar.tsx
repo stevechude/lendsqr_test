@@ -5,6 +5,7 @@ import DashIcon from "@/assets/DashIcon";
 import OrgIcon from "@/assets/OrgIcon";
 import { customersMenu } from "../sidebar/customers";
 import { businessMenu } from "../sidebar/businesses";
+import { settingsMenu } from "../sidebar/settings";
 
 const SideBar = () => {
   return (
@@ -24,7 +25,7 @@ const SideBar = () => {
 
         {/* customers */}
         <div className={styles.customers}>
-          <p>CUSTOMERS</p>
+          <p className={styles.customP}>CUSTOMERS</p>
           {customersMenu?.map((dt) => (
             <div key={dt.id}>
               {<dt.icon />}
@@ -34,8 +35,18 @@ const SideBar = () => {
         </div>
         {/* businesses */}
         <div className={styles.business}>
-          <p>BUSINESSES</p>
+          <p className={styles.busP}>BUSINESSES</p>
           {businessMenu?.map((dt) => (
+            <div key={dt.id}>
+              {<dt.icon />}
+              <p>{dt.name}</p>
+            </div>
+          ))}
+        </div>
+        {/* settings */}
+        <div className={styles.business}>
+          <p className={styles.settP}>SETTINGS</p>
+          {settingsMenu?.map((dt) => (
             <div key={dt.id}>
               {<dt.icon />}
               <p>{dt.name}</p>

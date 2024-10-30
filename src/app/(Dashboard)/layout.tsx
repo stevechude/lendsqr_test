@@ -13,9 +13,7 @@ const Layout = ({
       <Header />
       <div className={styles.side}>
         <SideBar />
-        <div className="p-2 lg:p-4 bg-[#ECECF1] overflow-x-auto overflow-y-auto w-full">
-          {children}
-        </div>
+        <div className={styles.content}>{children}</div>
       </div>
     </div>
   );
