@@ -10,3 +10,11 @@ export const tableHeaders = [
 export const userDetailsTabs = [
   "General Details", "Documents", 'Bank Details', 'Loans', 'Savings', 'App and System'
 ]
+
+export const gdFirstData = [
+  {
+    id: 1,
+    title: "full Name",
+    desc: "Grace Effiom"
+  }
+]
