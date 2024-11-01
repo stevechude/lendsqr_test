@@ -47,7 +47,7 @@ const cardsData = [
 ];
 
 const Users = () => {
-  const { data: users, isLoading } = useQuery({
+  const { data: users = [], isLoading } = useQuery({
     queryKey: ["fetchingUsers"],
     queryFn: () => fetchUsers(),
   });
@@ -57,7 +57,10 @@ const Users = () => {
   const [itemOffset, setItemOffset] = useState(0);
 
   const endOffset = itemOffset + itemsPerPage;
-  const currentItems = users?.slice(itemOffset, endOffset);
+  const currentItems = Array.isArray(users)
+    ? users.slice(itemOffset, endOffset)
+    : [];
+
   const pageCount = Math.ceil(users?.length / itemsPerPage);
 
   const handlePageClick = ({ selected }: any) => {
@@ -142,7 +145,9 @@ const Users = () => {
                     </tr>
                   ))
                 ) : (
-                  <p>No Users!</p>
+                  <tr className={styles.tableBod}>
+                    <td>No Users!</td>
+                  </tr>
                 )}
               </tbody>
             </table>

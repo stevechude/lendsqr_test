@@ -1,257 +1,258 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .back {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 18.77px;
-    color: #545F7D;
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18.77px;
+  color: #545f7d;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
 }
 
 .titleBtns {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    gap: 10px;
-    flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .deets {
-    color: #213F7D;
-    font-size: 16px;
-    line-height: 18.15px;
-    font-weight: 500;
-    flex: 1;
+  color: #213f7d;
+  font-size: 16px;
+  line-height: 18.15px;
+  font-weight: 500;
+  flex: 1;
 }
 
 .btns {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 10px;
-    line-height: 16.42px;
-    font-weight: 600;
-    // flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 10px;
+  line-height: 16.42px;
+  font-weight: 600;
+  // flex-shrink: 0;
 
-    .btnFirst {
-        color: #E4033B;
-        background-color: #fbfbfb;
-        border: 1px solid #E4033B;
-        border-radius: 5px;
-        padding: 3px 4px;
-    }
+  .btnFirst {
+    color: #e4033b;
+    background-color: #fbfbfb;
+    border: 1px solid #e4033b;
+    border-radius: 5px;
+    padding: 3px 4px;
+  }
 
-    .btnSecnd {
-        color: #39CDCC;
-        border: 1px solid #39CDCC;
-        border-radius: 5px;
-        padding: 3px 4px;
-        background-color: #fbfbfb;
-    }
+  .btnSecnd {
+    color: #39cdcc;
+    border: 1px solid #39cdcc;
+    border-radius: 5px;
+    padding: 3px 4px;
+    background-color: #fbfbfb;
+  }
 }
 
 .tabSection {
-    background-color: white;
-    box-shadow: 0px 0px 5px -2px gray;
-    overflow-x: auto;
-    border-radius: 6px;
+  background-color: white;
+  box-shadow: 0px 0px 5px -2px gray;
+  overflow-x: auto;
+  border-radius: 6px;
 }
 
 .tabsInner {
-    padding: 20px 20px 0px 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  padding: 20px 20px 0px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .tabsTop {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
 }
 
 .photoContainer {
-    // background: #213F7D;
-    // color: #213F7D;
-    border: 1px solid #213F7D;
-    opacity: 0.2;
-    border-radius: 100%;
-    padding: 10px;
+  // background: #213F7D;
+  // color: #213F7D;
+  border: 1px solid #213f7d;
+  opacity: 0.2;
+  border-radius: 100%;
+  padding: 10px;
 }
 
 .nameDiv {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
 
-    .nameFirst {
-        color: #213F7D;
-        font-size: 16px;
-        line-height: 18px;
-    }
+  .nameFirst {
+    color: #213f7d;
+    font-size: 16px;
+    line-height: 18px;
+  }
 
-    .nameSec {
-        color: #545F7D;
-        font-size: 10px;
-        line-height: 12.42px;
-    }
+  .nameSec {
+    color: #545f7d;
+    font-size: 10px;
+    line-height: 12.42px;
+  }
 }
 
 .starCont {
-    border-left: 1px solid gray;
-    border-right: 1px solid gray;
-    height: 4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nameStarDiv {
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
+  gap: 5px;
+  padding: 0 20px;
+
+  p {
+    font-size: 12px;
+    line-height: 16.42px;
+    font-weight: 500;
+    color: #545f7d;
+  }
+
+  span {
     display: flex;
-    flex-direction: column;
-    margin: auto 0;
+    align-items: center;
     gap: 5px;
-    padding: 0 20px;
-
-    p {
-        font-size: 12px;
-        line-height: 16.42px;
-        font-weight: 500;
-        color: #545F7D;
-    }
-
-    span {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-    }
+  }
 }
 
 .balanceBank {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    color: #213F7D;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: #213f7d;
 
-    p {
-        font-size: 18px;
-        line-height: 20px;
-    }
+  p {
+    font-size: 18px;
+    line-height: 20px;
+  }
 
-    span {
-        font-size: 10px;
-        line-height: 14px;
-    }
+  span {
+    font-size: 10px;
+    line-height: 14px;
+  }
 }
 
 .actualTabs {
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
 }
 
 .tabContent {
-    cursor: pointer;
-    background: none;
-    border: none;
+  cursor: pointer;
+  background: none;
+  border: none;
 
-    p {
-        width: 8rem;
-        text-align: center;
-        color: #000;
-        opacity: 0.8;
-    }
+  p {
+    width: 8rem;
+    text-align: center;
+    color: #000;
+    opacity: 0.8;
+  }
 }
 
 .tabDataContainer {
-    background: white;
-    border-radius: 6px;
-    height: 70vh;
-    box-shadow: 0px 0px 5px -2px gray;
+  background: white;
+  border-radius: 6px;
+  height: 70vh;
+  box-shadow: 0px 0px 5px -2px gray;
+  overflow-y: auto;
 }
 
 @media (min-width: 1024px) {
-    .container {
-        gap: 2rem;
+  .container {
+    gap: 2rem;
+  }
+
+  .titleBtns {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .deets {
+    font-size: 24px;
+  }
+
+  .btns {
+    font-size: 14px;
+    justify-content: unset;
+
+    .btnFirst {
+      padding: 5px 8px;
     }
 
-    .titleBtns {
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
+    .btnSecnd {
+      padding: 5px 8px;
+    }
+  }
+
+  .tabsInner,
+  .tabsTop {
+    gap: 50px;
+  }
+
+  .nameDiv {
+    .nameFirst {
+      font-size: 22px;
+      line-height: 25.81px;
     }
 
-    .deets {
-        font-size: 24px;
+    .nameSec {
+      font-size: 14px;
+      line-height: 16.42px;
+    }
+  }
+
+  .nameStarDiv {
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .balanceBank {
+    p {
+      font-size: 22px;
+      line-height: 25.81px;
     }
 
-    .btns {
-        font-size: 14px;
-        justify-content: unset;
-
-        .btnFirst {
-            padding: 5px 8px;
-        }
-
-        .btnSecnd {
-            padding: 5px 8px;
-        }
+    span {
+      font-size: 12px;
     }
+  }
 
-    .tabsInner,
-    .tabsTop {
-        gap: 50px;
+  .actualTabs {
+    justify-content: space-around;
+    gap: 20px;
+  }
+
+  .tabContent {
+    p {
+      width: auto;
     }
-
-    .nameDiv {
-        .nameFirst {
-            font-size: 22px;
-            line-height: 25.81px;
-        }
-
-        .nameSec {
-            font-size: 14px;
-            line-height: 16.42px;
-        }
-    }
-
-    .nameStarDiv {
-        p {
-            font-size: 14px;
-        }
-    }
-
-    .balanceBank {
-        p {
-            font-size: 22px;
-            line-height: 25.81px;
-        }
-
-        span {
-            font-size: 12px;
-        }
-    }
-
-    .actualTabs {
-        justify-content: space-around;
-        gap: 20px;
-    }
-
-    .tabContent {
-        p {
-            width: auto;
-        }
-    }
+  }
 }

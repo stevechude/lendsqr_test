@@ -1,11 +1,4 @@
-.container {
-  padding: 20px 20px 50px 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.gdfirst {
+.top {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -16,7 +9,7 @@
     color: #213f7d;
   }
 
-  .infoDiv {
+  .bot {
     display: grid;
     // grid-template-columns: repeat(2, 2fr);
     gap: 30px;
@@ -39,9 +32,6 @@
         font-weight: 500;
         line-height: 18.77px;
         color: #545f7d;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        text-wrap: wrap;
       }
     }
   }
@@ -49,32 +39,20 @@
 
 // Tablet view (768px - 1023px)
 @media (max-width: 768px) {
-  .infoDiv {
+  .bot {
     grid-template-columns: repeat(3, 2fr);
   }
 }
 
 // Mobile view (up to 767px)
 @media (max-width: 576px) {
-  .infoDiv {
+  .bot {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 1024px) {
-  .infoDiv {
-    grid-template-columns: repeat(5, 2fr);
+  .bot {
+    grid-template-columns: repeat(4, 2fr);
   }
-}
-
-// second
-.gdsecond {
-}
-
-// third
-.gdthird {
-}
-
-// fourth
-.gdfourth {
 }
