@@ -13,6 +13,11 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+
+  button {
+    background: none;
+    border: none;
+  }
 }
 
 .right {
@@ -49,6 +54,52 @@
   display: block;
 }
 
+.openMenu {
+  position: absolute;
+  width: 80%;
+  height: 100vh;
+  background-color: #39cdcc;
+
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+  overflow-y: auto;
+
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  // transition-duration: 150ms;
+  transition-duration: 300ms;
+}
+
+.insideMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  padding: 3px 10px;
+
+  .backBtn {
+    border: none;
+    background: none;
+    align-self: self-end;
+    // padding: 3px 10px;
+  }
+
+  .adedeji {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #213f7d;
+    justify-content: space-between;
+
+    .adedejiName {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+  }
+}
+
 @media (min-width: 1024px) {
   .inner {
     padding-left: 1rem;
@@ -56,6 +107,10 @@
   }
 
   .menu {
+    display: none;
+  }
+
+  .openMenu {
     display: none;
   }
 
@@ -112,5 +167,11 @@
 
   .username {
     display: flex;
+  }
+}
+
+@media (min-width: 768px) {
+  .openMenu {
+    width: 40%;
   }
 }

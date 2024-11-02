@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "../../styles/users.module.scss";
 import Cards from "./Cards";
 import UsersCardIcon from "@/assets/user-cards/Users";
@@ -53,6 +53,7 @@ const Users = () => {
   });
 
   const [dropdownUserId, setDropdownUserId] = useState<string | null>(null);
+  const dropDownRef = useRef<HTMLDivElement | null>(null);
   const [itemsPerPage] = useState(7);
   const [itemOffset, setItemOffset] = useState(0);
 
@@ -72,7 +73,23 @@ const Users = () => {
     setDropdownUserId(dropdownUserId === id ? null : id);
   };
 
-  //   console.log("users==", users);
+  useEffect(() => {
+    const hideOnClickOutside = (e: MouseEvent) => {
+      if (
+        dropDownRef.current &&
+        !dropDownRef.current.contains(e.target as Node)
+      ) {
+        setDropdownUserId(null);
+      }
+    };
+
+    document.addEventListener("click", hideOnClickOutside, true);
+
+    // Cleanup the event listener on unmount
+    return () => {
+      document.removeEventListener("click", hideOnClickOutside, true);
+    };
+  }, []);
 
   return (
     <div className={styles.container}>
@@ -106,14 +123,94 @@ const Users = () => {
               </thead>
               <tbody>
                 {users?.length > 0 ? (
-                  currentItems?.map((user: any) => (
+                  currentItems?.map((user: any, index) => (
                     <tr key={user?._id} className={styles.tableBod}>
-                      <td>{user?.organization}</td>
-                      <td>{user?.personalInfo?.fullName}</td>
-                      <td>{user?.personalInfo?.emailAddress}</td>
-                      <td>{user?.personalInfo?.phoneNumber}</td>
-                      <td>{user?.createdAt.slice(0, 10)}</td>
-                      <td>{user?.status}</td>
+                      <td
+                        style={{
+                          borderBottom:
+                            index === currentItems.length - 1
+                              ? "none"
+                              : "1px solid #213f7d1a",
+                        }}
+                      >
+                        {user?.organization}
+                      </td>
+                      <td
+                        style={{
+                          borderBottom:
+                            index === currentItems.length - 1
+                              ? "none"
+                              : "1px solid #213f7d1a",
+                        }}
+                      >
+                        {user?.personalInfo?.fullName}
+                      </td>
+                      <td
+                        style={{
+                          borderBottom:
+                            index === currentItems.length - 1
+                              ? "none"
+                              : "1px solid #213f7d1a",
+                        }}
+                      >
+                        {user?.personalInfo?.emailAddress}
+                      </td>
+                      <td
+                        style={{
+                          borderBottom:
+                            index === currentItems.length - 1
+                              ? "none"
+                              : "1px solid #213f7d1a",
+                        }}
+                      >
+                        {user?.personalInfo?.phoneNumber}
+                      </td>
+                      <td
+                        style={{
+                          borderBottom:
+                            index === currentItems.length - 1
+                              ? "none"
+                              : "1px solid #213f7d1a",
+                        }}
+                      >
+                        {user?.createdAt.slice(0, 10)}
+                      </td>
+                      <td
+                        style={{
+                          borderBottom:
+                            index === currentItems.length - 1
+                              ? "none"
+                              : "1px solid #213f7d1a",
+                        }}
+                      >
+                        <span
+                          style={{
+                            backgroundColor:
+                              user?.status === "pending"
+                                ? "rgba(233, 178, 0, 0.1)" // Yellow for pending
+                                : user?.status === "blacklisted"
+                                ? "rgba(228, 3, 59, 0.1)" // Red for blacklisted
+                                : user?.status === "active"
+                                ? "rgba(57, 205, 98, 0.06)" // Green for active
+                                : user?.status === "inactive"
+                                ? "rgba(84, 95, 125, 0.06)" // Gray for inactive
+                                : "inherit",
+                            color:
+                              user?.status === "pending"
+                                ? "#E9B200"
+                                : user?.status === "blacklisted"
+                                ? "#E4033B"
+                                : user?.status === "active"
+                                ? "#39CD62"
+                                : user?.status === "inactive"
+                                ? "#545F7D"
+                                : "inherit",
+                          }}
+                          className={styles.userStatus}
+                        >
+                          {user?.status}
+                        </span>
+                      </td>
                       <td>
                         <FiMoreVertical
                           onClick={() => handleDrop(user?._id)}
@@ -122,7 +219,7 @@ const Users = () => {
                       </td>
                       {dropdownUserId === user?._id && (
                         <td className={styles.drop}>
-                          <div className={styles.dropMain}>
+                          <div ref={dropDownRef} className={styles.dropMain}>
                             <Link
                               href={`/users/${user?._id}`}
                               style={{ textDecorationLine: "none" }}

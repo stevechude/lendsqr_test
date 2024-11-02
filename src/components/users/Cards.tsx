@@ -12,7 +12,21 @@ const Cards = ({ title, icon: Icon, amount }: Props) => {
   return (
     <div className={styles.container}>
       <div className={styles.main}>
-        <div className={styles.iconContainer}>
+        <div
+          style={{
+            backgroundColor:
+              title === "Users"
+                ? "rgba(223, 24, 255, 0.1)"
+                : title === "Active Users"
+                ? "rgba(87, 24, 255, 0.1)"
+                : title === "Users with Loans"
+                ? "rgba(245, 95, 68, 0.1)"
+                : title === "Users with Savings"
+                ? "rgba(255, 51, 102, 0.1)"
+                : "inherit",
+          }}
+          className={styles.iconContainer}
+        >
           <Icon />
         </div>
         <p className={styles.title}>{title}</p>
