@@ -121,12 +121,11 @@
     .in {
       padding: 7px 0;
       padding-left: 10px;
-      border: 1px solid #213f7d;
-      opacity: 0.2;
+      border: 1px solid rgba(33, 63, 125, 0.2);
       border-top-left-radius: 7px;
       border-bottom-left-radius: 7px;
       width: 300px;
-      color: #545f7d;
+      color: rgba(33, 63, 125, 0.7);
       outline: none;
     }
 

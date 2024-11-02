@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import styles from "../../styles/sidebar.module.scss";
 import { FaAngleDown } from "react-icons/fa";
@@ -6,8 +7,12 @@ import OrgIcon from "@/assets/OrgIcon";
 import { customersMenu } from "../sidebar/customers";
 import { businessMenu } from "../sidebar/businesses";
 import { settingsMenu } from "../sidebar/settings";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const SideBar = () => {
+  const pathname = usePathname();
+
   return (
     <section className={styles.container}>
       <div className={styles.barColumn}>
@@ -18,18 +23,20 @@ const SideBar = () => {
           <FaAngleDown />
         </div>
         {/* dash */}
-        <div className={styles.dash}>
+        <Link href={'/dashboard'} className={styles.dash}>
           <DashIcon />
           <p>Dashboard</p>
-        </div>
+        </Link>
 
         {/* customers */}
         <div className={styles.customers}>
           <p className={styles.customP}>CUSTOMERS</p>
           {customersMenu?.map((dt) => (
-            <div key={dt.id}>
-              {<dt.icon />}
-              <p>{dt.name}</p>
+            <div key={dt.id} className={pathname.includes(dt.path) ? styles.customersLink : ""}>
+              <Link href={`/${dt.path}`}>
+                {<dt.icon />}
+                <p>{dt.name}</p>
+              </Link>
             </div>
           ))}
         </div>
@@ -37,20 +44,20 @@ const SideBar = () => {
         <div className={styles.business}>
           <p className={styles.busP}>BUSINESSES</p>
           {businessMenu?.map((dt) => (
-            <div key={dt.id}>
+            <Link href={`#`} key={dt.id}>
               {<dt.icon />}
               <p>{dt.name}</p>
-            </div>
+            </Link>
           ))}
         </div>
         {/* settings */}
         <div className={styles.business}>
           <p className={styles.settP}>SETTINGS</p>
           {settingsMenu?.map((dt) => (
-            <div key={dt.id}>
+            <Link href={`#`} key={dt.id}>
               {<dt.icon />}
               <p>{dt.name}</p>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

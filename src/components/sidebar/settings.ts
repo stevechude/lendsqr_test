@@ -6,16 +6,19 @@ export const settingsMenu = [
   {
     id: 1,
     name: "Preferences",
+    path: 'preferences',
     icon: PrefsIcon,
   },
   {
     id: 2,
     name: "Fees and Pricing",
+    path: 'fees-pricing',
     icon: FeesPricing,
   },
   {
     id: 3,
     name: "Audit Logs",
+    path: 'audit-logs',
     icon: AuditIcon,
   },
 ];
