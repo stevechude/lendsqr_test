@@ -31,17 +31,91 @@
     width: 100%;
     overflow-x: auto;
     padding: 0 0 0 7px;
+    position: relative;
+
+    .filterStyle {
+      position: absolute;
+      width: 15rem;
+      height: fit-content;
+      background: white;
+      border-radius: 6px;
+      box-shadow: 0px 0px 5px -2px gray;
+      z-index: 1000;
+      left: 10px;
+      top: 50px;
+      bottom: 10px;
+
+      .filterInner {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px 20px;
+
+        div {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          text-transform: capitalize;
+
+          .filterField {
+            border: 1px solid rgba(33, 63, 125, 0.2);
+            border-radius: 6px;
+            padding: 7px 4px;
+            outline: none;
+            padding-left: 6px;
+          }
+        }
+
+        span {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .reset {
+            padding: 7px 8px;
+            width: 6rem;
+            border-radius: 5px;
+            font-size: 14px;
+            line-height: 16.42px;
+            border: 1px solid #545f7d;
+            background: white;
+            color: #545f7d;
+          }
+          .filter {
+            padding: 8px 8px;
+            width: 6rem;
+            border-radius: 5px;
+            font-size: 14px;
+            line-height: 16.42px;
+            border: none;
+            background: #39cdcc;
+            color: white;
+          }
+        }
+      }
+    }
   }
 }
 
 .tableH {
   text-transform: uppercase;
   color: #545f7d;
+  // position: relative;
 
   th {
     text-align: left;
     font-size: 12px;
     padding: 20px 10px;
+  }
+
+  .innerHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .fillIcon {
+    cursor: pointer;
   }
 }
 

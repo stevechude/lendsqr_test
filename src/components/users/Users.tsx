@@ -18,6 +18,7 @@ import { FaAngleRight } from "react-icons/fa6";
 import { LuEye, LuUserX } from "react-icons/lu";
 import { GrUserExpert } from "react-icons/gr";
 import Link from "next/link";
+import FilterDrop from "./FilterDrop";
 
 const cardsData = [
   {
@@ -52,6 +53,9 @@ const Users = () => {
     queryFn: () => fetchUsers(),
   });
 
+  const [showFilter, setShowFilter] = useState<number | null>(null);
+  const filterRef = useRef<HTMLDivElement | null>(null);
+
   const [dropdownUserId, setDropdownUserId] = useState<string | null>(null);
   const dropDownRef = useRef<HTMLDivElement | null>(null);
   const [itemsPerPage] = useState(7);
@@ -72,6 +76,25 @@ const Users = () => {
   const handleDrop = (id: string) => {
     setDropdownUserId(dropdownUserId === id ? null : id);
   };
+
+  const handleFilterDrop = (id: number) => {
+    setShowFilter(showFilter === id ? null : id);
+  };
+
+  useEffect(() => {
+    const hideFilter = (e: MouseEvent) => {
+      if (filterRef.current && !filterRef.current.contains(e.target as Node)) {
+        setShowFilter(null);
+      }
+    };
+
+    document.addEventListener("click", hideFilter, true);
+
+    // Cleanup the event listener on unmount
+    return () => {
+      document.removeEventListener("click", hideFilter, true);
+    };
+  }, []);
 
   useEffect(() => {
     const hideOnClickOutside = (e: MouseEvent) => {
@@ -114,9 +137,18 @@ const Users = () => {
               <thead>
                 <tr className={styles.tableH}>
                   {tableHeaders?.map((header, i: any) => (
-                    <th key={i}>
-                      {header}
-                      <MdFilterList />
+                    <th key={header?.id}>
+                      <div className={styles.innerHeader}>
+                        {header?.title}
+                        <MdFilterList
+                          size={20}
+                          onClick={() => handleFilterDrop(header?.id)}
+                          className={styles.fillIcon}
+                        />
+                      </div>
+                      {showFilter === header?.id && (
+                        <FilterDrop filterRef={filterRef} />
+                      )}
                     </th>
                   ))}
                 </tr>
