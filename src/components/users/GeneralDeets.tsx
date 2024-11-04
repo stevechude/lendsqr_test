@@ -11,7 +11,7 @@ import { usePathname } from "next/navigation";
 const GeneralDeets = () => {
   const path = usePathname();
   const id = path.substring(path.lastIndexOf("/") + 1);
-  const { data: user, isLoading } = useQuery({
+  const { data: user } = useQuery({
     queryKey: ["fetchingUsers"],
     queryFn: () => fetchUserById(id),
   });

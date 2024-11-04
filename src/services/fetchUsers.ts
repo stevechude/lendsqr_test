@@ -1,3 +1,5 @@
+import { UserDetails } from "@/lib/types";
+
 export const fetchUsers = async () => {
   const response = await fetch("/data/generated.json");
   const data = await response.json();
@@ -7,6 +9,6 @@ export const fetchUsers = async () => {
 export const fetchUserById = async (id: string) => {
   const response = await fetch(`/data/generated.json/`);
   const data = await response.json();
-  const userWithId = data?.find((user: any) => user._id == id);
+  const userWithId = data?.find((user: UserDetails) => user._id == id);
   return userWithId;
 };

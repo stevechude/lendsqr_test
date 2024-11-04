@@ -19,6 +19,7 @@ import { LuEye, LuUserX } from "react-icons/lu";
 import { GrUserExpert } from "react-icons/gr";
 import Link from "next/link";
 import FilterDrop from "./FilterDrop";
+import { User } from "@/lib/types";
 
 const cardsData = [
   {
@@ -68,7 +69,7 @@ const Users = () => {
 
   const pageCount = Math.ceil(users?.length / itemsPerPage);
 
-  const handlePageClick = ({ selected }: any) => {
+  const handlePageClick = ({ selected }: { selected: number }) => {
     const newOffset = selected * itemsPerPage;
     setItemOffset(newOffset);
   };
@@ -136,7 +137,7 @@ const Users = () => {
             <table>
               <thead>
                 <tr className={styles.tableH}>
-                  {tableHeaders?.map((header, i: any) => (
+                  {tableHeaders?.map((header) => (
                     <th key={header?.id}>
                       <div className={styles.innerHeader}>
                         {header?.title}
@@ -155,7 +156,7 @@ const Users = () => {
               </thead>
               <tbody>
                 {users?.length > 0 ? (
-                  currentItems?.map((user: any, index) => (
+                  currentItems?.map((user: User, index) => (
                     <tr key={user?._id} className={styles.tableBod}>
                       <td
                         style={{
